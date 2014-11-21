@@ -4,7 +4,7 @@
 
 source ~/.colors
 # test command to make the terminal pretty
-# xrdb ~/.Xresources
+xrdb ~/.Xresources
 ~/.wallpapers/wp change
 # begin all the herbstluftwm stuff
 
