@@ -16,6 +16,7 @@ if len(sys.argv) < 2:
 print sys.argv[1]
 
 WALLPAPER = sys.argv[1]
+print "Wallpaper::::::",WALLPAPER
 filename = WALLPAPER.split('/').pop()
 COLORS = "{0}.colors".format(filename)
 XRESOURCES = "{0}.Xres".format(filename)

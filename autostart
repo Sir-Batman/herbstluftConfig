@@ -5,7 +5,7 @@
 source ~/.colors
 # test command to make the terminal pretty
 xrdb ~/.Xresources
-~/.wallpapers/wp change
+~/.config/herbstluftwm/wp change
 # begin all the herbstluftwm stuff
 
 hc() {

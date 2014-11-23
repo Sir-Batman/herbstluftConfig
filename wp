@@ -14,6 +14,7 @@ function main {
   done
   DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
   K_MEANS=16
+
   WALLPAPER_DIR=${WALLPAPER_DIR:-~/.config/herbstluftwm/wallpapers}
 
   while test $# -gt 0; do
@@ -95,12 +96,12 @@ function add {
     fi
   done
 
-  cp $files $WALLPAPER_DIR
-  cd $WALLPAPER_DIR
+  cp $files $WALLPAPER_DIR/images
+  cd $WALLPAPER_DIR/
 
   for file in $*; do
     echo ":: Generating .$file.colors and .$file.Xres in $PWD"
-    python2 $DIR/py/color_detect.py $file $K_MEANS
+    python2 $WALLPAPER_DIR/../py/color_detect.py $file $K_MEANS
   done
 }
 
@@ -116,15 +117,15 @@ function remove {
 
   for file in $*; do
     indent "Removing $file"
-    rm ${WALLPAPER_DIR}/${file}
-    rm ${WALLPAPER_DIR}/${file}.{colors,Xres}
+    rm ${WALLPAPER_DIR}/images/${file}
+    rm ${WALLPAPER_DIR}/colors/${file}.{colors,Xres}
   done
 }
 
 function change {
   #:: Select a random background from WALLPAPER_DIR, or use the passed background
   if [ -z $1 ]; then
-    background=$(find $WALLPAPER_DIR -type f \( -name '*.jpg' -o -name '*.png' \) | shuf -n1)
+    background=$(ls $WALLPAPER_DIR/images/ | shuf -n1)
   else
     background=$WALLPAPER_DIR/$1
 
@@ -134,13 +135,24 @@ function change {
     fi
   fi
 
-  if [ -f ${background}.Xres ] || [ -f ${background}.colors ]; then
+  if [ -f ${background}.Xres ]; then
     indent "Could not find ${background}.Xres or ${background}.colors"
     exit 1
   fi
 
+  if [ -f ${background}.colors ]; then
+	indent "Could not find ${background}.colors"
+	exit 1
+  fi
+  indent "Current selected background: ${background}"
+
   filename=$(basename $background)
   dirname=$(dirname $background)
+
+  echo "==> WallpaperDir: ${WALLPAPER_DIR}"
+  echo "==> Background: ${background}"
+  echo "==> filename: ${filename}"
+  echo "==> dirname: ${dirname}"
 
   #:: Set the background
   feh --bg-fill $background
@@ -156,8 +168,8 @@ function change {
     #:: Set the colorscheme
     #ln -f ${dirname}/${filename}.colors ~/.colors
 	#rm ~/.colors
-	cp -f ${dirname}/${filename}.colors ~/.colors
-    xrdb -merge ${dirname}/${filename}.Xres
+	cp -f ${WALLPAPER_DIR}/colors/${filename}.colors ~/.colors
+    xrdb -merge ${WALLPAPER_DIR}/colors/${filename}.Xres
   fi
 }
 
