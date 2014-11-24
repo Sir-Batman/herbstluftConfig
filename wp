@@ -155,7 +155,7 @@ function change {
   echo "==> dirname: ${dirname}"
 
   #:: Set the background
-  feh --bg-fill $background
+  feh --bg-fill $WALLPAPER_DIR/images/$background
 
   #:: Record the current background
   set_current $background
