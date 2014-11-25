@@ -5,7 +5,6 @@
 source ~/.colors
 # test command to make the terminal pretty
 xrdb ~/.Xresources
-~/.config/herbstluftwm/wp change
 # begin all the herbstluftwm stuff
 
 hc() {
@@ -200,7 +199,10 @@ herbstclient set tree_style '╾│ ├└╼─┐'
 # or simply:
 # hc detect_monitors
 
-# nitrogen --restore
+# set the background and apply the colorscheme
+~/.config/herbstluftwm/wp change
+
+# start the top status bar
 ~/.config/herbstluftwm/runbar.sh
 
 # find the panel
