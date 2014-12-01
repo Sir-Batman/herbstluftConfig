@@ -97,7 +97,7 @@ function add {
   done
 
   cp $files $WALLPAPER_DIR/images
-  cd $WALLPAPER_DIR/
+  cd $WALLPAPER_DIR/images
 
   for file in $*; do
     echo ":: Generating .$file.colors and .$file.Xres in $PWD"

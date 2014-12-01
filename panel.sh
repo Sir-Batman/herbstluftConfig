@@ -3,9 +3,10 @@
 # z3bra - (c) wtfpl 2014
 # Fetch infos on your computer, and print them to stdout every second.
 source ~/.colors
-BACKTEXT=%{F#ff666666}
-FORETEXT=%{F#ffff3300}
-
+BACK=$(echo ${COLOR10} | tr -d '#')
+FORE=$(echo ${COLOR15} | tr -d '#')
+BACKTEXT=%{F#ff${BACK}}
+FORETEXT=%{F#ff${FORE}}
 
 clock() {
 	DAY=$(date +%a)
