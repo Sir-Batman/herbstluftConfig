@@ -96,13 +96,17 @@ function add {
     fi
   done
 
-  cp $files $WALLPAPER_DIR/images
-  cd $WALLPAPER_DIR/images
+  #cp $files $WALLPAPER_DIR/images
+  #cd $WALLPAPER_DIR/images
 
   for file in $*; do
     echo ":: Generating .$file.colors and .$file.Xres in $PWD"
     python2 $WALLPAPER_DIR/../py/color_detect.py $file $K_MEANS
   done
+
+  echo "Moving generated files..."
+  mv *.Xres *.colors *.sample.png $WALLPAPER_DIR/colors
+  mv *.jpg  $WALLPAPER_DIR/images
 }
 
 function remove {
