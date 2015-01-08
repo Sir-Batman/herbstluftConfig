@@ -131,9 +131,9 @@ function change {
   if [ -z $1 ]; then
     background=$(ls $WALLPAPER_DIR/images/ | shuf -n1)
   else
-    background=$WALLPAPER_DIR/$1
+    background=$1
 
-    if [ ! -f $background ]; then
+    if [ ! -f $WALLPAPER_DIR/images/$background ]; then
       indent "$1 does not exist in $WALLPAPER_DIR"
       exit 1
     fi

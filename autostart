@@ -143,6 +143,8 @@ hc keybind $Mod-Shift-f spawn firefox
 #background changing
 hc keybind $Mod-Shift-b spawn ~/.config/herbstluftwm/wp change
 
+#Screen shots
+hc keybind PrintScreen spawn scrot
 # theme
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
@@ -201,7 +203,7 @@ herbstclient set tree_style '╾│ ├└╼─┐'
 # hc detect_monitors
 
 # set the background and apply the colorscheme
-~/.config/herbstluftwm/wp change
+~/.config/herbstluftwm/wp change manhatten.jpg
 
 # start the top status bar
 ~/.config/herbstluftwm/runbar.sh
