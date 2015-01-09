@@ -11,12 +11,12 @@ This code's purpose is to do:
   
 =================
 The dependencies required for this to work out of the box are (as far as I know):
- *feh, for assigning a new background.
- *PIL, the python image library. To satisfy this in Arch Linux, get the `python-pillow` package. 
- *urxvt, for the terminal.
- *scrot, to take screenshots
- *firefox
- *bar, bar ain't recursive, a wonderful little status bar manager
+ * feh, for assigning a new background.
+ * PIL, the python image library. To satisfy this in Arch Linux, get the `python-pillow` package. 
+ * urxvt, for the terminal.
+ * scrot, to take screenshots
+ * firefox
+ * bar, bar ain't recursive, a wonderful little status bar manager
 
 =================
 This work would not be possible without some big thanks to people:
