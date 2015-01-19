@@ -60,9 +60,18 @@ groups() {
     cur=`xprop -root _NET_CURRENT_DESKTOP | awk '{print $3}'`
     tot=`xprop -root _NET_NUMBER_OF_DESKTOPS | awk '{print $3}'`
 
-    for w in `seq 0 $((cur - 1))`; do line="${line}░"; done
-    line="${line}█"
-    for w in `seq $((cur + 2)) $tot`; do line="${line}░"; done
+#    for w in `seq 1 $((cur))`; do line="${line} $w"; done
+#    line="${line} |"
+#    for w in `seq $((cur + 1)) $tot`; do line="${line} $w"; done
+#	 end=`expr $tot - 1`
+	for w in `seq 1 $tot`; do
+		if [ `expr $w - 1`  == $cur ]
+		then
+			line="${line} $FORETEXT $w";
+		else
+			line="${line} $BACKTEXT $w"
+		fi
+	done
     echo $line
 }
 
