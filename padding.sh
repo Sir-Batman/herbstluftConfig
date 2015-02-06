@@ -24,3 +24,4 @@ else
 	herbstclient set window_gap 10
 fi
 
+~/.config/herbstluftwm/runbar.sh
