@@ -3,20 +3,16 @@ monitor=${1:-0}
 BAR=`ps -A | grep bar`
 PANEL=`ps -A | grep panel.sh`
 
-if [[ -z "$BAR" ]]
+if [[ -n "$BAR" ]]
 then
-	#echo "no kill bar"
-else
-	#echo "kill bar"
+	echo "kill bar"
 	pkill bar
 
 fi
 
-if [[ -z "$PANEL" ]]
+if [[ -n "$PANEL" ]]
 then
-	#echo "no kill panel"
-else
-	#echo "kill panel.sh"
+	echo "no kill panel"
 	pkill panel.sh
 fi
 
