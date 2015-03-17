@@ -134,7 +134,7 @@ function change {
     background=$1
 
     if [ ! -f $WALLPAPER_DIR/images/$background ]; then
-      indent "$1 does not exist in $WALLPAPER_DIR"
+      indent "$1 does not exist in $WALLPAPER_DIR/images"
       exit 1
     fi
   fi

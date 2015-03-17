@@ -5,14 +5,14 @@ PANEL=`ps -A | grep panel.sh`
 
 if [[ -n "$BAR" ]]
 then
-	echo "kill bar"
+	#echo "kill bar"
 	pkill bar
 
 fi
 
 if [[ -n "$PANEL" ]]
 then
-	echo "no kill panel"
+	#echo "no kill panel"
 	pkill panel.sh
 fi
 
