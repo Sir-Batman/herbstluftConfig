@@ -151,6 +151,9 @@ hc keybind $Mod-Print spawn ~/.config/herbstluftwm/screenshot.sh
 #Changing the padding
 hc keybind $Mod-p spawn ~/.config/herbstluftwm/padding.sh
 
+#Add a key for quick suspend
+hc keybind XF86Launch1 spawn ~/.config/herbstluftwm/suspend.sh
+
 # theme
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
@@ -208,7 +211,7 @@ herbstclient set tree_style '╾│ ├└╼─┐'
 # hc detect_monitors
 
 # set the background and apply the colorscheme
-~/.config/herbstluftwm/wp change 
+~/.config/herbstluftwm/wp change CalvinAndHobbes.jpg
 
 # start the top status bar
 ~/.config/herbstluftwm/runbar.sh
