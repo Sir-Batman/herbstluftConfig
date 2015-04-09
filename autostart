@@ -211,10 +211,13 @@ herbstclient set tree_style '╾│ ├└╼─┐'
 # hc detect_monitors
 
 # set the background and apply the colorscheme
-~/.config/herbstluftwm/wp change CalvinAndHobbes.jpg
+~/.config/herbstluftwm/wp change
 
 # start the top status bar
 ~/.config/herbstluftwm/runbar.sh
+
+# start the battery notification script
+~/.config/herbstluftwm/batterynotification.sh
 
 # find the panel
 #panel=~/.config/herbstluftwm/panel.sh
