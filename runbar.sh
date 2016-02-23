@@ -1,12 +1,12 @@
 monitor=${1:-0} 
 
-BAR=`ps -A | grep bar`
+BAR=`ps -A | grep lemonbar`
 PANEL=`ps -A | grep panel.sh`
 
 if [[ -n "$BAR" ]]
 then
 	#echo "kill bar"
-	pkill bar
+	pkill lemonbar
 
 fi
 
@@ -24,7 +24,7 @@ if [ $FRGAP == 30 ]
 then
 	#echo "then"
 	herbstclient pad $monitor 40
-	WIDTH=1400
+	WIDTH=1166
 	HEIGHT=30
 
 	W_OFFSET=100
@@ -33,7 +33,7 @@ then
 else
 	#echo "else"
 	herbstclient pad $monitor 25
-	WIDTH=1600
+	WIDTH=1366
 	HEIGHT=25
 
 	W_OFFSET=0
@@ -46,6 +46,6 @@ fi
 #echo $W_OFFSET
 #echo $H_OFFSET
 
-~/.config/herbstluftwm/panel.sh | bar -f "-*-bitstream vera sans-*-r-*-*-*-80-*-*-*-*-*-*" -p -B\#ff191919 -g $WIDTH\x$HEIGHT+$W_OFFSET+$H_OFFSET
+~/.config/herbstluftwm/panel.sh | lemonbar -f "DejaVu Sans" -p -B\#ff191919 -g $WIDTH\x$HEIGHT+$W_OFFSET+$H_OFFSET
 #~/.config/herbstluftwm/panel.sh | bar  -p -B\#ff191919 -g 1400x30+100+10
 #-*-bitstream vera sans-*-r-*-*-*-120-*-*-*-*-*-*

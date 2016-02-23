@@ -16,10 +16,13 @@ The dependencies required for this to work out of the box are (as far as I know)
  * urxvt, for the terminal.
  * scrot, to take screenshots
  * firefox
- * bar, bar ain't recursive, a wonderful little status bar manager
+ * lemonbar, to render the status bar
  * dmenu
  * libnotify, for the usage of notify-send in the low battery messages. I also use the dunst package as the backend for the notifications.
+ * xorg-xprop, for status bar information
+ * bc, for the status bar processing
  * some packages for the power reading in the status bar. Currently not sure which packages hold the commands...
+
 
 =================
 This work would not be possible without some big thanks to people:
