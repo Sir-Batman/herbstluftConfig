@@ -35,7 +35,7 @@ cpuload() {
 }
 
 memused() {
-    read t f <<< `grep -E 'Mem(Total|Free)' /proc/meminfo |awk '{print $2}'`
+    read t f <<< `grep -E 'Mem(Total|Available)' /proc/meminfo |awk '{print $2}'`
     bc <<< "scale=2; 100 - $f / $t * 100" | cut -d. -f1
 }
 
