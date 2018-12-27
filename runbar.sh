@@ -46,6 +46,8 @@ fi
 #echo $W_OFFSET
 #echo $H_OFFSET
 
-~/.config/herbstluftwm/panel.sh | lemonbar -f "DejaVu Sans" -p -B\#ff191919 -g $WIDTH\x$HEIGHT+$W_OFFSET+$H_OFFSET
+#~/.config/herbstluftwm/panel.sh | lemonbar -f "-xos4-terminesspowerline-medium-r-normal--14-120-72-72-c-60-iso10646-1" -p -B\#ff191919 -g $WIDTH\x$HEIGHT+$W_OFFSET+$H_OFFSET
+polybar topbar
 #~/.config/herbstluftwm/panel.sh | bar  -p -B\#ff191919 -g 1400x30+100+10
-#-*-bitstream vera sans-*-r-*-*-*-120-*-*-*-*-*-*
+#-xos4-terminesspowerline-*-*-*-*-14-*-*-*-*-*-*-*
+

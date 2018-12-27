@@ -11,9 +11,12 @@ hc() {
     herbstclient "$@"
 }
 
+hc unrule -F
+
 hc emit_hook reload
 
 xsetroot -solid '#5A8E3A'
+
 
 # remove all existing keybindings
 hc keyunbind --all
@@ -24,7 +27,7 @@ hc keyunbind --all
 Mod=Mod4   # Use the super key as the main modifier
 
 #define and set up the tags
-TAG_NAMES=( term web img herb null foo )
+TAG_NAMES=( 1 2 3 4 5 6 )
 TAG_KEYS=( {1..6} 0 )
 
 hc rename default "${TAG_NAMES[0]}" || true
@@ -89,7 +92,7 @@ hc keybind $Mod-bracketleft  use_index -1 --skip-visible
 # layouting
 hc keybind $Mod-r remove
 hc keybind $Mod-space cycle_layout 1
-hc keybind $Mod-s floating toggle
+#hc keybind $Mod-s floating toggle
 hc keybind $Mod-f fullscreen toggle
 hc keybind $Mod-p pseudotile toggle
 
@@ -153,7 +156,7 @@ hc set frame_border_width 0
 hc set always_show_frame 0
 hc set frame_bg_transparent 1
 hc set frame_transparent_width 0
-hc set frame_gap 30
+hc set frame_gap 5
 
 hc attr theme.active.color 'orange'
 hc attr theme.normal.color '#454545'
@@ -168,8 +171,8 @@ hc attr theme.active.inner_color '#3E4A00'
 hc attr theme.active.outer_color '#3E4A00'
 hc attr theme.background_color '#000000'
 
-hc set window_gap 10
-hc set frame_padding 10
+hc set window_gap 0
+hc set frame_padding 0
 hc set smart_window_surroundings 0
 hc set smart_frame_surroundings 1
 hc set mouse_recenter_gap 0
@@ -199,10 +202,23 @@ herbstclient set tree_style '╾│ ├└╼─┐'
 hc detect_monitors
 
 # set the background and apply the colorscheme
-~/.config/herbstluftwm/wp change manhatten.png
+#~/.config/herbstluftwm/wp change AuroraOverIceland.png
+#~/.config/herbstluftwm/wp change fubuki.png
+#~/.config/herbstluftwm/wp change manhatten.png
+#~/.config/herbstluftwm/wp change windwaker.jpg
+#~/.config/herbstluftwm/wp change theater_17.jpg
+#~/.config/herbstluftwm/wp change Tokyo-Subway-Map-Dark.jpg
+#~/.config/herbstluftwm/wp change hexagons.jpg
+#~/.config/herbstluftwm/wp change reigen.jpg
+~/.config/herbstluftwm/wp change winter_fun.jpg
+#~/.config/herbstluftwm/wp change megumin.jpg
+#~/.config/herbstluftwm/wp change botw.png
+
+
+
 
 # start the top status bar
-~/.config/herbstluftwm/runbar.sh
+#~/.config/herbstluftwm/runbar.sh
 
 # start the battery notification script
 #~/.config/herbstluftwm/batterynotification.sh
@@ -210,9 +226,9 @@ hc detect_monitors
 #dunst&
 
 # find the panel
-#panel=~/.config/herbstluftwm/panel.sh
+panel=~/.config/herbstluftwm/runbar.sh
 #[ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
-#for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
-#    # start it on each monitor
-#    "$panel" $monitor &
-#done
+for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
+    # start it on each monitor
+    "$panel" $monitor &
+done
