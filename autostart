@@ -176,7 +176,7 @@ hc set frame_padding 0
 hc set smart_window_surroundings 0
 hc set smart_frame_surroundings 1
 hc set mouse_recenter_gap 0
-hc set default frame layout 0
+hc set default frame layout 2
 
 hc set_layout horizontal
 
