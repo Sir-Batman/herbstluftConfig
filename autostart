@@ -27,7 +27,10 @@ hc keyunbind --all
 Mod=Mod4   # Use the super key as the main modifier
 
 #define and set up the tags
-TAG_NAMES=( 1 2 3 4 5 6 )
+hc set default_frame_layout 3 # grid
+hc set_layout grid # fix the first frame
+
+TAG_NAMES=( web chat 3 4 5 6 )
 TAG_KEYS=( {1..6} 0 )
 
 hc rename default "${TAG_NAMES[0]}" || true
@@ -176,9 +179,6 @@ hc set frame_padding 0
 hc set smart_window_surroundings 0
 hc set smart_frame_surroundings 1
 hc set mouse_recenter_gap 0
-hc set default frame layout 2
-
-hc set_layout horizontal
 
 # rules
 hc unrule -F
