@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/bin/bash
+
 FRGAP=$(herbstclient get frame_gap)
 FRPAD=$(herbstclient get frame_padding)
 WINGAP=$(herbstclient get window_gap)
