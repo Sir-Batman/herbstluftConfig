@@ -46,6 +46,10 @@
 #echo $W_OFFSET
 #echo $H_OFFSET
 
+herbstclient pad 0 30
+herbstclient pad 1 50
+herbstclient pad 2 50
+
 if [[ $(ps -A | grep polybar) ]] 
 then 
     pkill polybar
