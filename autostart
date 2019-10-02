@@ -226,11 +226,3 @@ hc detect_monitors
 
 #dunst&
 
-# DEPRECATED, panel launched by runbar at the moment.
-# find the panel
-# panel=~/.config/herbstluftwm/runbar.sh
-#[ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
-# for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
-    # # start it on each monitor
-    # "$panel" $monitor &
-# done
