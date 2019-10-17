@@ -116,11 +116,6 @@ hc keybind $Mod-i jumpto urgent
 
 #Backlight control
 
-#increase
-hc keybind $Mod-F7 spawn ~/.config/herbstluftwm/backlight.sh inc 5
-#decrease
-hc keybind $Mod-F6 spawn ~/.config/herbstluftwm/backlight.sh dec 5
-
 #Volume Control
 #up
 hc keybind $Mod-F10 spawn ~/.config/herbstluftwm/volume.sh up 2
@@ -143,11 +138,12 @@ hc keybind $Mod-Print spawn ~/.config/herbstluftwm/screenshot.sh
 #Changing the padding
 hc keybind $Mod-p spawn ~/.config/herbstluftwm/padding.sh
 
+# TV switching
+hc keybind $Mod-t spawn ~/.config/herbstluftwm/switch_tv.sh
+
 #Add a key for quick suspend
 #hc keybind XF86Launch1 spawn ~/.config/herbstluftwm/suspend.sh
 
-#Restart the systemd module for netctl-auto
-hc keybind $Mod-Shift-i spawn ~/.config/herbstluftwm/internet_restart.sh
 # theme
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
