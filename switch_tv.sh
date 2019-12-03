@@ -19,6 +19,8 @@ then
     ~/.screenlayout/default.sh
     sleep 1
     change_audio "alsa_output.pci-0000_28_00.3.analog-stereo"
+    # Restart middle status bar, since it dies while in TV mode
+    ~/.config/herbstluftwm/runbar.sh
 else
     echo "disconnected! Connecting"
     ~/.screenlayout/tv.sh
