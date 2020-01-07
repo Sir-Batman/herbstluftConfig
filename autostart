@@ -217,7 +217,9 @@ hc detect_monitors
 #~/.config/herbstluftwm/wp change winter_fun.jpg
 #~/.config/herbstluftwm/wp change megumin.jpg
 #~/.config/herbstluftwm/wp change botw.png
-~/.config/herbstluftwm/wp change Redline.jpg
+#~/.config/herbstluftwm/wp change Redline.jpg
+feh --bg-fill ~/Pictures/bebop.jpeg ~/Pictures/zeldaglass.jpg ~/Pictures/mechhighlander.jpg
+
 
 
 
