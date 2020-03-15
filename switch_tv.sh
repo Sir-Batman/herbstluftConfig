@@ -17,6 +17,7 @@ if [[ $(xrandr | awk '/\ connected/ && /[[:digit:]]x[[:digit:]].*+/{print $1}') 
 then
     echo "connected! Disconnecting"
     ~/.screenlayout/default.sh
+    herbstclient detect_monitors
     sleep 1
     change_audio "alsa_output.pci-0000_28_00.3.analog-stereo"
     # Restart middle status bar, since it dies while in TV mode
@@ -24,6 +25,7 @@ then
 else
     echo "disconnected! Connecting"
     ~/.screenlayout/tv.sh
+    herbstclient detect_monitors
     sleep 1
     change_audio "alsa_output.pci-0000_26_00.1.hdmi-surround-extra1"
 fi
